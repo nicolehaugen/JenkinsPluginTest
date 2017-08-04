@@ -5,6 +5,6 @@ metadata:
 spec:
   containers:
     - name: private-reg-nicolecontainer
-      image: jenkinspluginacr.azurecr.io/samples/nginx
+      image: jenkinspluginacr.azurecr.io/samples/nginx:latest
   imagePullSecrets:
     - name: regsecret
