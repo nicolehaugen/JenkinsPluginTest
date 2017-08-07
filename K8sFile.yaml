@@ -1,19 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: nginx
+  name: nginx-deployment
 spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      name: nginx
   template:
     metadata:
       labels:
-        app: nginx
-spec:
-  containers:
-    - name: nginx
-      image: jenkinspluginacr.azurecr.io/samples/nginx:latest
-  imagePullSecrets:
-    - name: regsecret
+        component: nginx
+  spec:
+    containers:
+      - name: nginx
+        image: jenkinspluginacr.azurecr.io/samples/nginx:latest
+    imagePullSecrets:
+      - name: regsecret
+
+
