@@ -11,8 +11,11 @@ spec:
   spec:
    containers:
    - name: nginx
-     image: docker.artifactory/samples/nginx:latest
+     image: docker.artifactory/hello-world:1.0
+   ports:
+   - containerPort: 8080
    imagePullSecrets:
    - name: regsecret
+
 
 
