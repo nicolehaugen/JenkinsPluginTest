@@ -11,7 +11,7 @@ spec:
   spec:
    containers:
    - name: nginx
-     image: docker.artifactory/hello-world:1.0
+     image: docker.artifactory/samples/nginx:latest
    imagePullSecrets:
    - name: regsecret
 
