@@ -11,7 +11,7 @@ spec:
   spec:
    containers:
    - name: nginx
-     image: nlhartsaas-docker.jfrog.io/samples/nginx:latest
+     image: docker.artifactory/samples/nginx:latest
    imagePullSecrets:
    - name: regsecret
 
