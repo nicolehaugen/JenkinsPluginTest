@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: nicolepodbrandnew
+  name: nicoledeployment
 spec:
   replicas: 3
   template:
