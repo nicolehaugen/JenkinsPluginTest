@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: nicoledeployment
+  name: nginx-deployment
 spec:
   replicas: 3
   template:
@@ -10,7 +10,7 @@ spec:
         app: nginx
 spec:
   containers:
-    - name: private-reg-nicolecontainer
+    - name: nginx
       image: jenkinspluginacr.azurecr.io/samples/nginx:latest
   imagePullSecrets:
     - name: regsecret
