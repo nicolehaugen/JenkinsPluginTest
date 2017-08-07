@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nicolepodnew
+  name: nicolepodnew3
 spec:
   containers:
     - name: private-reg-nicolecontainer
-      image: http://jenkinspluginacr.azurecr.io/samples/nginx:latest
+      image: jenkinspluginacr.azurecr.io/samples/nginx
   imagePullSecrets:
     - name: regsecret
