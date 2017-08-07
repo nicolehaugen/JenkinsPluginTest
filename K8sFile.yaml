@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nicolepod
+  name: nicolepodbrandnew
 spec:
   containers:
     - name: private-reg-nicolecontainer
