@@ -11,7 +11,7 @@ spec:
   spec:
    containers:
    - name: nginx
-     image: docker.artifactory/samples/nginx:latest
+     image: docker.artifactory/samples/nginx:$BUILD_NUMBER
    ports:
    - containerPort: 8080
    imagePullSecrets:
