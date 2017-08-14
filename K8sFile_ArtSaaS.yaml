@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
  name: nginx-deployment
 spec:
- replicas: 2
+ replicas: 3
  template:
   metadata:
    labels:
@@ -11,7 +11,7 @@ spec:
   spec:
    containers:
    - name: nginx
-     image: nlhartsaas-docker.jfrog.io/samples/nginx:latest
+     image: nlhartsaas-docker.jfrog.io/samples/nginx:$BUILD_NUMBER.0
    ports:
    - containerPort: 8080
    imagePullSecrets:
