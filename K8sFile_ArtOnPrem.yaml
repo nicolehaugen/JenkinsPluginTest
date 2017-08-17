@@ -16,6 +16,12 @@ spec:
    - containerPort: 8080
    imagePullSecrets:
    - name: regsecret
+   livenessProbe:
+     initialDelaySeconds: 2
+     periodSeconds: 5
+     httpGet:
+       path: /health
+       port: 8080
 
 
 
