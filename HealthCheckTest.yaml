@@ -13,8 +13,8 @@ spec:
    - name: busybox
      image: docker.artifactory/busybox:1.0
      livenessProbe:
-       exec:
-        command:
+      exec:
+       command:
         - cat
         - /tmp/healthy
       initialDelaySeconds: 5
@@ -23,7 +23,7 @@ spec:
    - containerPort: 8080
    imagePullSecrets:
    - name: regsecret
-   
+
 
 
 
