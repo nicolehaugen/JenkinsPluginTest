@@ -21,7 +21,7 @@ spec:
      periodSeconds: 5
      httpGet:
        path: /health
-       port: 8080
+       port: 8089
 
 
 
