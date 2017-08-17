@@ -17,13 +17,14 @@ spec:
    imagePullSecrets:
    - name: regsecret
    livenessProbe:
-    exec:
-     command:
-        - cat
-        - /tmp/healthy
-      initialDelaySeconds: 5
-      periodSeconds: 5
-      port: 8080
+    httpGet:
+        path: /healthz
+        port: 8080
+        httpHeaders:
+          - name: X-Custom-Header
+            value: Awesome
+      initialDelaySeconds: 3
+      periodSeconds: 3
 
 
 
