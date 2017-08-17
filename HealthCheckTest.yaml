@@ -13,14 +13,12 @@ spec:
    - name: busybox
      image: docker.artifactory/busybox:1.0
      livenessProbe:
-      httpGet:
-        path: /healthz
-        port: 8080
-        httpHeaders:
-          - name: X-Custom-Header
-            value: Awesome
-        initialDelaySeconds: 3
-        periodSeconds: 3
+       exec:
+        command:
+        - cat
+        - /tmp/healthy
+      initialDelaySeconds: 5
+      periodSeconds: 5
    ports:
    - containerPort: 8080
    imagePullSecrets:
